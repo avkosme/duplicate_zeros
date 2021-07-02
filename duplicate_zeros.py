@@ -6,22 +6,21 @@ class Solution:
 
         len_arr = len(arr)
 
-        k = 0
         zero_keys = []
-        for val in arr:
+        for k, val in enumerate(arr):
 
             if val == 0:
                 zero_keys.append(k)
 
             k += 1
 
-        k = 0
-        for zero_key in zero_keys:
 
-            zero_key = k + 1 + zero_key
+        for k_zero, zero_key in enumerate(zero_keys):
+
+            zero_key = k_zero + 1 + zero_key
             arr.insert(zero_key, 0)
             del arr[-1]
 
-            k +=1
+            k_zero +=1
 
         self.arr = arr
