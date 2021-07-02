@@ -29,3 +29,10 @@ class DuplicateZerosTest(unittest.TestCase):
        self.assertEqual([1,0,0,5,7,8], self.obj.arr)
 
 
+   def test_duplicate_zeros4(self):
+       arr = [0,4,1,0,0,8,0,0,3]
+       self.obj.duplicateZeros(arr)
+
+       self.assertEqual([0,0,4,1,0,0,0,0,8], self.obj.arr)
+
+

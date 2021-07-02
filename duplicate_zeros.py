@@ -4,7 +4,6 @@ class Solution:
 
     def duplicateZeros(self, arr: [int]) -> None:
 
-
         len_arr = len(arr)
 
         k = 0
@@ -16,18 +15,12 @@ class Solution:
 
             k += 1
 
-
-
+        k = 0
         for zero_key in zero_keys:
 
-
-            if 1 < zero_key:
-                zero_key +=1
+            zero_key = k + 1 + zero_key
             arr.insert(zero_key, 0)
 
-            if len(arr) != len_arr+1:
-                del arr[len_arr:]
+            k +=1
 
-                break
-
-        self.arr = arr
+        self.arr = arr[:len_arr]
