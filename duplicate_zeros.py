@@ -20,7 +20,8 @@ class Solution:
 
             zero_key = k + 1 + zero_key
             arr.insert(zero_key, 0)
+            del arr[-1]
 
             k +=1
 
-        self.arr = arr[:len_arr]
+        self.arr = arr
