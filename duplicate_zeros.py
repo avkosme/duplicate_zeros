@@ -4,8 +4,6 @@ class Solution:
 
     def duplicateZeros(self, arr: [int]) -> None:
 
-        len_arr = len(arr)
-
         zero_keys = []
         for k, val in enumerate(arr):
 
